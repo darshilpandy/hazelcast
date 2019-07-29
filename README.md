@@ -1,7 +1,6 @@
 # Hazelcast
 
-[Hazelcast IMDG](http://hazelcast.com/) is the most widely used in-memory data grid with hundreds of thousands of installed clusters around the world. It offers caching solutions ensuring that data is in the right place when it’s needed for optimal performance.
-
+[Hazelcast IMDG](http://hazelcast.com/) is used for Central caching tool. This document can help you to install basic Hazlecast on K8s cluster. This Hazelcast culster will be deployed as a Kubernetes services and any Applicatuion can consume and use the clustriesed hazelcast.
 ## Quick Start
 
 ```bash
@@ -18,10 +17,10 @@ This chart bootstraps a [Hazelcast](https://github.com/hazelcast/hazelcast-docke
 
 ## Installing the Chart
 
-To install the chart with the release name `my-release`:
+To install the chart with the release name `hazelcast`:
 
 ```bash
-$ helm install --name my-release stable/hazelcast
+$ helm install --name hazelcast stable/hazelcast
 ```
 
 The command deploys Hazelcast on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
@@ -30,10 +29,10 @@ The command deploys Hazelcast on the Kubernetes cluster in the default configura
 
 ## Uninstalling the Chart
 
-To uninstall/delete the `my-release` deployment:
+To uninstall/delete the `hazelcast` deployment:
 
 ```bash
-$ helm delete my-release
+$ helm delete hazelcast
 ```
 
 The command removes all the Kubernetes components associated with the chart and deletes the release.
@@ -88,7 +87,7 @@ The following table lists the configurable parameters of the Hazelcast chart and
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
 ```bash
-$ helm install --name my-release \
+$ helm install --name hazelcast \
   --set cluster.memberCount=3,hazelcast.rest=false \
     stable/hazelcast
 ```
@@ -98,7 +97,7 @@ The above command sets number of Hazelcast members to 3 and disables REST endpoi
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```bash
-$ helm install --name my-release -f values.yaml stable/hazelcast
+$ helm install --name hazelcast -f values.yaml stable/hazelcast
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
