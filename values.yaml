@@ -20,7 +20,7 @@ image:
 # Cluster settings
 cluster:
   # memberCount is the number Hazelcast members
-  memberCount: 2
+  memberCount: 3
 
 # Hazelcast properties
 hazelcast:
@@ -87,10 +87,10 @@ readinessProbe:
 # Configure resource requests and limits
 # ref: http://kubernetes.io/docs/user-guide/compute-resources/
 #
-# resources:
-#   requests:
-#     memory: 256Mi
-#     cpu: 100m
+ resources:
+   requests:
+     memory: 256Mi
+     cpu: 100m
 
 # Hazelcast Service properties
 service:
